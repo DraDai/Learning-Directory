@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    text-decoration: none;
+}
+
+
+#header{
+    height: 70px;
+    background-color: rgb(222, 100, 100);
+    width: 1392px;
+}
+
+#header img{
+    width: 120px;
+    height: auto;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    margin-left:80px;
+}
+
+#header-ul{
+    float: right;
+    position: absolute;
+    width: 952px;
+    top: 17px;
+    left: 300px
+}
+
+#header-ul li{
+    display: inline-block;
+    font-size: x-large;
+    clear: left;
+    margin-right: 100px;
+}
+
+#header-ul li a{
+    color: white;
+}
+
+#header-ul li a:hover{
+    color: #e8e405;
+}
+
+#carousel{
+    background-color: rgba(203, 195, 195, 0.123);
+    width: 1100px;
+    height: 680px;
+    position: relative;
+    left: 150px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.carousel-img{
+    height: 680px;
+    width: auto;
+    display: none;
+}
+
+.img-current{
+    display: block;
+}
+
+#carousel-ul{
+    position: absolute;
+    top: 635px;
+}
+
+.carousel-li {
+    background-color: grey;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 3px;
+}
+
+.li-current{
+    width: 12px;
+    height: 12px;
+    background-color: aliceblue;
+}
+
+.carousel-arrow{
+    background-color: rgba(134, 142, 149, 0.497);
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+}
+
+.carousel-arrow:nth-of-type(4) {
+    right: 0px;
+}
+
+.carousel-arrow:last-of-type {
+    left: 0px;
+}
+
+
+#text {
+    width: 1100px;
+    position: relative;
+    left: 150px;
+    margin-top: 10px;
+}
+
+.textImg{
+    transition: transform 0.3s ease; 
+}
+
+.textImg:hover{
+    transform: translate(5px,-5px);
+    box-shadow: 5px 5px 10px 0px rgb(37, 36, 36);
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+h1{
+    font-family: 楷体;
+    font-size: 46px;
+    color: chocolate;
+}
+
+p{
+    text-indent: 2em;
+    font-size: large;
+    margin-top: 11px;
+    line-height: 30px;
+}
+
+#mainText img{
+    width: 169px;
+    margin: 15px 15px 15px 15px;
+    float: right;
+}
+
+#mainText span{
+    font-size: larger;
+    color:#ee9b0e
+}
+
+.imgLine .textImg{
+    height: 200px;
+    margin-left: 17px;
+    margin-bottom: 50px;
+}
+
+
+#Footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(222, 100, 100);
+    color: #fff;
+    width: 1392px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+summary::before {
+    content: '\25BA'; /* Unicode 符号，如箭头 */
+    margin-right: 0.5rem; /* 可选：调整 marker 与文本之间的间距 */
+}
+
+#wh img {
+    display: block;
+    width: 420px;
+    margin: 10px auto;
+}
+
+.tc {
+    width: 100%;
+    overflow: hidden;
+}
+
+.tc h3 {
+    text-align: center;
+}
+
+.tc li {
+    float: left;
+    padding: 10px;
+    margin-right: 15px;
+    width: 180px;
+    height: 380px;
+    border-radius: 80px;
+    border: 1px solid #ccc;
+}
+
+.tc li a {
+    color: #b83c3c;
+}
+
+.tc li:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #b83c3c;
+}
+
+.tc li:hover h3,
+.tc li:hover a {
+    color: #fff;
+}
+
+.tc li:last-child {
+    margin-right: 0;
+}
+
+
+.honor {
+    overflow: hidden;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.honor li {
+    float: left;
+    width: 50%;
+    line-height: 40px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.honor li span {
+    float: right;
+    margin-right: 40px;
+}
+
+.honor li:hover {
+    color: #b83c3c;
+    cursor: pointer;
+}
+

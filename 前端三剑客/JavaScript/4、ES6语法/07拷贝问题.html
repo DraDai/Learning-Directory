@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [1,2,3]
+        //浅拷贝，将引用赋值给其他变量
+        let arr2 = arr
+        arr[0] = 100
+        console.log(arr2)
+
+        //深拷贝
+            //利用解构表达式深拷贝
+            let arr3 = [...arr]
+            arr[1] = 100
+            console.log(arr3)
+
+            //利用JSON串进行深拷贝
+            let person = JSON.parse(JSON.stringify(person1))
+            person1.name = '小明'
+            console.log(person)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

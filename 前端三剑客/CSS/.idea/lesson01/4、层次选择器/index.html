@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>层次选择器</title>
+
+    <style>
+/*        后代选择器: 表示选择元素1的所有的后代元素2
+        格式 : 元素1 元素2*/
+        body p{
+            background-color:red;
+        }
+
+/*        子代选择器: 表示选择元素1的所有儿子元素
+        格式 : 元素1>元素2*/
+        li > p{
+            background-color:black;
+        }
+
+/*        相邻兄弟选择器 : 表示选择指定元素的下一个同辈元素
+        格式 : 元素1 + 元素2*/
+        .p1 + p{
+            background-color:blue;
+        }
+
+/*        通用兄弟选择器 : 表示选择指定元素下面的所有同辈元素
+        格式 : 元素1 ~ 元素2*/
+        #p3 ~ p{
+            background-color:green;
+        }
+    </style>
+</head>
+<body>
+
+<p class="p1">p1</p>
+<p>p2</p>
+<p id="p3">p3</p>
+
+<ul>
+    <li>
+        <p>p4</p>
+    </li>
+    <li>
+        <p>p5</p>
+    </li>
+    <li>
+        <p>p6</p>
+    </li>
+</ul>
+
+<p>p7</p>
+</body>
+</html>

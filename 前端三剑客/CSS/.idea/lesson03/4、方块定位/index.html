@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>方块定位</title>
+
+<!--    方块定位（Block-level positioning）是一种 CSS 布局技术，用于在网页中定位块级元素。
+        方块定位允许你通过设置元素的位置属性（如 position: relative;、position: absolute;、position: fixed;）
+        来控制元素在页面上的位置。-->
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        .father{
+            width:600px;
+            height:19999px;
+            position:relative;
+            border:1px solid black;
+        }
+
+/*        <!--    相对定位（Relative Positioning）：*/
+/*        使用 position: relative; 属性，可以将元素相对于其正常位置进行偏移，但它仍然占据着文档流中的空间。-->*/
+        .first{
+            border:1px solid black;
+            margin:20px;
+            background-color:#867474;
+
+            position:relative;
+            top:-20px;
+            left:-20px;
+        }
+
+/*        绝对定位（Absolute Positioning）：
+        使用 position: absolute; 属性，可以将元素相对于其最近的已定位祖先元素进行定位，
+        如果没有已定位的祖先元素，则相对于初始包含块（一般是 <body> 元素）进行定位。*/
+        .two{
+            border:1px solid black;
+            margin:20px;
+            background-color:#867474;
+
+            position:absolute;
+            top:2px;
+            right:0;
+        }
+
+/*        固定定位（Fixed Positioning）：
+      使用 position: fixed; 属性，可以将元素相对于浏览器窗口进行定位，
+      元素会始终保持在页面上的固定位置，不会随着页面滚动而移动。*/
+        .three{
+            border:1px solid black;
+            margin:20px;
+            background-color:#867474;
+
+            position:fixed;
+            bottom:0;
+            right:0;
+        }
+    </style>
+
+</head>
+<body>
+<div class="father">
+    <div class="first">
+        <p>这是第一行</p>
+    </div>
+    <div class="two">
+        <p>这是第二行</p>
+    </div>
+    <div class="three">
+        <p>这是第三行</p>
+    </div>
+</div>
+</body>
+</html>

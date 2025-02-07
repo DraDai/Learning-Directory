@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结构伪类选择器</title>
+
+    <style>
+/*        元素1:first-child : 选择元素1的父元素下的第一个子元素,
+        如果该子元素和元素1的类型相同,那么它会被选中*/
+        p:first-child{
+            background-color:red;
+        }
+
+/*        元素1:last-child : 选择元素1的父元素下的最后一个子元素,
+        如果该子元素和元素1的类型相同,那么它会被选中
+        注意:body标签的最后一个子标签是它的结束标签*/
+        p:last-child{
+            background-color:blue;
+        }
+
+/*        元素1:nth-child(n) : 找到元素1的父元素的第n个子元素,
+        如果该子元素和元素1的类型相同,那么它会被选中,
+        其中n可以是一个具体的数字、一个表达(如2n表示偶数位置的元素)式或关键词(如odd表示奇数位置的元素)*/
+        div:nth-child(2n){
+            background-color:black;
+        }
+
+/*        元素1:nth-last-child(n) : 找到元素1的父元素的倒数第n个子元素
+        如果该子元素和元素1的类型相同,那么它会被选中*/
+        p:nth-last-child(4){
+            background-color:aquamarine;
+        }
+
+/*        元素1:only-child : 选定父元素下唯一一个子元素*/
+        p:only-child{
+            background-color:lightpink;
+        }
+
+/*        元素1:nth-of-type(n) : 选择父元素下第n个指定类型的子元素*/
+        div:nth-of-type(even){
+            background-color:lightsalmon;
+        }
+
+/*        元素1:nth-last-of-type(n) : 选择父元素下的倒数第n个指定类型的子元素*/
+
+/*        元素1:first-of-type : 选择父元素下的第一个指定类型子元素*/
+        li:first-of-type{
+            background-color:darkolivegreen;
+        }
+
+/*        元素1:last-of-type : 选择父元素下的最后一个指定类型子元素*/
+        li:last-of-type{
+            background-color:lightgoldenrodyellow
+        }
+    </style>
+</head>
+<body>
+
+<p>p1</p>
+<div>div1</div>
+<div>div2</div>
+<p>p2</p>
+<p>p5</p>
+<div>div3</div>
+<p>p7</p>
+<ul>
+    <li>l1</li>
+    <li>l2</li>
+    <li>l3</li>
+</ul>
+<p>p8</p>
+<div>
+    <p>这是一个段落</p>
+</div>
+
+
+</body>
+</html>

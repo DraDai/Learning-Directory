@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            JSON格式的用法
+            var personStr = '{"属性名":"属性值","属性名":"属性值"...}'
+            属性值是数字可以不用""处理
+        */
+
+        //这是一个JSON格式的字符串
+        var personStr = '{"name":"张三","age":10,"dog":{"dname":"小花"},"loveSingers":["小米","王晓东"]}';
+
+        console.log(personStr);
+        console.log(typeof(personStr));
+        
+        var person = JSON.parse(personStr);
+        console.log(person);
+
+        var personStr2 = JSON.stringify(person);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

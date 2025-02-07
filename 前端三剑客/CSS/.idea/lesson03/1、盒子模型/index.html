@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+
+    <style>
+        #box{
+            width:300px;
+            /*            边框boder:粗细, 样式, 颜色
+                            css提供了多种边框样式,可以通过'border-style'属性进行设置
+                            下面是一些常用的边框样式:
+                            none：无边框，即不显示边框。
+
+                            solid：实线边框，边框呈现为实心线条。
+
+                            dashed：虚线边框，边框呈现为短短的虚线。
+
+                            dotted：点线边框，边框呈现为一系列点。
+
+                            double：双线边框，边框呈现为两条实线。
+
+                            groove：3D凹槽边框，边框呈现为凹陷的效果，类似于雕刻在元素表面。
+
+                            ridge：3D凸槽边框，边框呈现为凸出的效果，类似于凸起的按钮。
+
+                            inset：内阴影边框，边框呈现为元素内部凹陷的效果。
+
+                            outset：外阴影边框，边框呈现为元素外部凸出的效果
+                            */
+            border:5px inset #d4dcc9;
+
+/*            可设置上、下、左、右外边距,auto为自动居中对齐*/
+            Margin:0 auto;
+        }
+
+        h4{
+            text-align:center;
+            margin:0;
+            padding:10px;
+            background-color:aquamarine;
+        }
+        form{
+            background-color:lightskyblue;
+        }
+
+        form div{
+            margin-bottom: 10px;
+        }
+
+        form div span{
+            display:inline-block;
+            width:60px;
+            text-align:right;
+            margin-right:10px;
+        }
+
+        form div input{
+            display:inline-block;
+            margin-right:30px;
+        }
+        form div:last-child{
+            margin:0;
+        }
+        div:nth-of-type(1) > input{
+            border:3px solid black;
+        }
+
+        form{
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+<!--
+    CSS的盒子模型描述了网页中的元素是如何被渲染和布局的。
+    它将每个HTML元素看作是一个矩形的盒子，该盒子包含了元素的内容、内边距（padding）、边框（border）和外边距（margin）。
+
+    盒子模型的四个部分如下：
+
+    内容框（Content Box）：内容框是盒子模型的内部部分，包含了元素的实际内容，例如文本、图像或其他内联元素。
+
+    内边距（Padding）：内边距是内容框与边框之间的空白区域，用于控制内容与边框之间的距离。内边距的大小可以通过CSS的padding属性来设置。
+
+    边框（Border）：边框是盒子模型的可选部分，围绕在内容框和内边距之外，用于定义元素的边界。边框的样式、颜色和宽度可以通过CSS的border属性来设置。
+
+    外边距（Margin）：外边距是盒子模型的外部部分，用于控制元素与其他元素之间的距离。外边距的大小可以通过CSS的margin属性来设置。
+
+    盒子模型的大小由这四个部分的总和决定。例如，元素的宽度等于内容框的宽度加上内边距和边框的宽度，再加上外边距的宽度。
+    在进行页面布局时，理解和控制盒子模型是非常重要的，因为它直接影响到元素在页面上的位置和大小。
+-->
+<div id="box">
+    <h4>会员登录</h4>
+    <form action="#" id="kuang">
+        <div>
+            <span>用户名</span>
+            <input type="text">
+        </div>
+        <div>
+            <span>密码</span>
+            <input type="text">
+        </div>
+        <div>
+            <span>邮箱</span>
+            <input type="text">
+        </div>
+    </form>
+</div>
+</body>
+</html>

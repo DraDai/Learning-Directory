@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+  <style>
+/*    选择所有具有 'href' 属性的<a>标签*/
+    a[href]{
+      color: blue;
+    }
+
+/*    选择 href 属性值为 'https://example.com' 的<a>标签*/
+    a[href="https://example.com"]{
+      font-weight: bold;
+    }
+
+/*    选择 class 属性值包含 'btn' 的元素*/
+    [class~="btn"]{
+      background-color: yellow;
+    }
+
+/*    选择 href 属性值以 'https://' 开头的<a>标签*/
+    a[href^="https://"]{
+      text-decoration: none;
+    }
+
+/*    选择 href 属性值以 '.pdf' 结尾的<a>标签*/
+    a[href$=".pdf"]{
+      color: red;
+    }
+
+/*    选择 title 属性值包含 'example' 的元素
+        *=和~=的区别是,*=只要属性内有指定的字符串,就会被选中, 而~=必须是由空格包围的词语才会被选中*/
+    [title*="example"]{
+      border: 1px solid green;
+    }
+  </style>
+</head>
+<body>
+
+<p class="demo">
+
+<a href="#">Link 1</a>
+<a href="https://example.com">Link 2</a>
+<a href="http://example.org">Link 3</a>
+<a href="https://example.com/docs/document.pdf">PDF Document</a>
+
+<div class="btn primary">Button 1</div>
+<div class="btn secondary">Button 2</div>
+<div class="btn tertiary">Button 3</div>
+
+<div title="This is an example">Element with Title</div>
+<div title="Another example">Another Element</div>
+</p>
+</body>
+</html>

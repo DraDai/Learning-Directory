@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display与float</title>
+
+
+<!--    `display` 和 `float` 是 CSS 中常用的布局属性，用于控制元素在页面上的排列和布局方式。
+
+1. display：
+   - `display` 属性用于设置元素的显示方式。它可以控制元素是作为块级元素、行内元素还是其他一些特殊类型的元素显示。
+   - 常见的 `display` 属性值包括：
+     - `block`：将元素显示为块级元素，使其独占一行，可以设置宽度、高度、内外边距等。
+     - `inline`：将元素显示为行内元素，使其与其他行内元素在同一行内，不能设置宽度和高度。
+     - `inline-block`：将元素显示为行内块级元素，使其与其他行内元素在同一行内，并且可以设置宽度、高度、内外边距等。
+     - `none`：隐藏元素，使其不在页面上显示。
+   - 通过设置 `display` 属性，可以实现灵活的元素布局和排列。
+
+2. float：
+   - `float` 属性用于设置元素在父元素内浮动的方式。浮动的元素会脱离正常的文档流，可以向左或向右移动，直到它的边缘碰到包含块的边缘或另一个浮动元素的边缘。
+   - 常见的 `float` 属性值包括：
+     - `left`：使元素向左浮动。
+     - `right`：使元素向右浮动。
+     - `none`：取消元素的浮动。
+   - 通过设置 `float` 属性，可以实现元素的排列和布局，例如实现多列布局或实现文字环绕图片等效果。
+
+这两个属性通常用于创建复杂的页面布局和设计，但在实际应用中需要注意它们可能导致的一些布局问题，如清除浮动、包含块塌陷等。-->
+    <style>
+        .container{
+            width:600px;
+/*            height:1024px;*/
+            margin:0 auto;
+
+/*            border:2px solid black;*/
+        }
+
+        .cul1{
+            width:600px;
+            /*            border:2px solid black;*/
+        }
+
+        .cul1 .cul-1{
+            width:390px;
+            height:200px;
+            background-color:red;
+            margin-right:10px;
+            float:left;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+
+            border-radius:10px;
+        }
+
+        .cul1 .cul-2{
+            width:200px;
+            height:200px;
+            background-color:blue;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            border-radius:10px;
+            float:right;
+        }
+
+        /*        元素后跟::after表示在元素末尾添加一个无名子元素*/
+        .cul1::after{
+        /*            content表示子元素内容*/
+            content:"";
+            /*            想要清除浮动,必须要设置为块*/
+            display:block;
+            /*            both表示清除左右浮动*/
+            clear:both;
+        }
+
+        .cul2{
+            width:600px;
+            margin-top:10px;
+            /*            border:2px solid black;*/
+        }
+
+        .cul2 .cul-1{
+            width:195px;
+            height:200px;
+            background-color:greenyellow;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            margin-right:5px;
+            border-radius:10px;
+            float:left;
+        }
+
+        .cul2 .cul-2{
+            width:290px;
+            height:200px;
+            background-color:lightsalmon;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            margin-left:5px;
+            margin-right:5px;
+            border-radius:10px;
+            float:left;
+        }
+
+        .cul2 .cul-3{
+            width:95px;
+            height:200px;
+            background-color:darkturquoise;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            margin-left:5px;
+            border-radius:10px;
+            float:right;
+        }
+
+        .cul2::after{
+            content:"";
+            display:block;
+            clear:both;
+        }
+
+        .cul3{
+            width:600px;
+            margin-top:10px;
+/*            border:2px solid black;*/
+        }
+
+        .cul3 ul{
+            margin:0;
+            padding:0;
+            background-color:blueviolet;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            border-radius:10px;
+            list-style:none;
+        }
+
+        .cul3 ul li{
+        /*            border:1px solid black;*/
+            background-color:#e3e307;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            margin:5px;
+            width:110px;
+            height:120px;
+            border-radius:10px;
+            float:left;
+        }
+
+        .cul3::after{
+            content:"";
+            display:block;
+            clear:left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cul1">
+            <div class="cul-1"></div>
+            <div class="cul-2"></div>
+        </div>
+        <div class="cul2">
+            <div class="cul-1"></div>
+            <div class="cul-2"></div>
+            <div class="cul-3"></div>
+        </div>
+        <div class="cul3">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

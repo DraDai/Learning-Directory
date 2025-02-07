@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签学习</title>
+</head>
+<body>
+
+<!--表格table
+行 tr
+列 td
+
+-------------
+
+th 表示表头单元格(table header)，用于定义表格的表头
+    基本用法：
+        <th>必须放在<tr>内
+        <th>标签通常配合scope属性一起使用，明确是行的表头还是列的表头
+            <th scope="col">Name</th>
+            <th scope="row">Age</th>
+-------------
+<caption>标签必须直接位于<table>标签的内部，位于所有表格行、表头之前
+    它为用户更好的理解表格内容
+
+-->
+
+<table border="1" cellspacing="0">
+    <caption>new table</caption>
+    <tr>
+        <!--colspan : 跨列-->
+        <td colspan="4">1-1</td>
+    </tr>
+    <tr>
+        <!--rowspan : 跨行-->
+        <td rowspan="2">2-1</td>
+        <td>2-2</td>
+        <td>2-3</td>
+        <td>2-4</td>
+    </tr>
+    <tr>
+        <td>3-1</td>
+        <td>3-2</td>
+        <td>3-3</td>
+    </tr>
+</table>
+</body>
+</html>

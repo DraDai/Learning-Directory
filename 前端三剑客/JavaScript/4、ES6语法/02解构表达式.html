@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let arr = [11,22,33,44]
+        //使用解构表达式取出数组中的元素
+        let [a, b, c, d, e = 10] = arr
+        console.log(a, b, c, d, e)
+
+
+        let person = {
+            name: "zhangsan",
+            age : 10
+        }
+        //使用解构表达式获取对象的属性值
+        let {name, age} = person
+        console.log(name, age)
+
+
+        //解构表达式应用在方法的参数列表
+        function showArr([a,b,c]){
+            console.log(a, b, c)
+        }
+
+        showArr(arr)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

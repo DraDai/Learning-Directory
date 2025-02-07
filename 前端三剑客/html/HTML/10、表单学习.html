@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆注册</title>
+</head>
+<body>
+
+<h1>注册</h1>
+
+<!--表单form
+
+action : 表单提交的位置, 可以是网站, 也可以是一个请求处理地址
+method : post, get 提交方式
+    get方式提交 : 可以在url中看到提交的信息,不安全,但高效
+    post方式提交 : 比较安全,可传输大文件
+input : 输入框标签
+type : 输入框类型
+name : 输入框名称
+value : 输入框默认初始值
+maxlength : 输入最大字符
+size : 文本框最大长度
+readonly : 只读属性
+disable : 禁用属性
+-->
+
+
+<form action="1、我的第一个html网页.html" method="get">
+
+    <p>名字 : <input type="text" name="username" value="匿名" maxlength="8" readonly></p>
+    <p>密码 : <input type="password" name="pwd" disabled></p>
+    <p>z账户 : <input type="text" name="text" value="headen" hidden></p>
+
+
+
+<!--    要进行单选,必须使选项在一组内,把选项的name属性都指向同一个组名就行了
+        checked : 表示默认选中-->
+    <p>
+        姓名:
+        <input type="radio" value="boy" name="sex" checked>男
+        <input type="radio" value="girl" name="sex">女
+    </p>
+
+
+
+<!--    多选框:
+        input type="checkbox"
+        -->
+    <p>
+        爱好 :
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="code" name="hobby">敲代码
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="game" name="hobby" checked>游戏
+    </p>
+
+
+
+<!--    下拉框 , 列表框
+    select : 下拉框标签
+        option : 选项标签
+            selected : 默认选项
+    -->
+    <p>
+        国家
+        <select name="country">
+            <option value="china" selected>中国</option>
+            <option value="us">美国</option>
+            <option value="japan">日本</option>
+            <option value="uk">英国</option>
+        </select>
+    </p>
+
+
+
+<!--    文本域
+        textarea : 文本域标签
+        cols : 列数
+        rows : 行数-->
+    <p>
+        反馈
+        <textarea name="textarea" cols="50" rows="10"></textarea>
+    </p>
+
+<!--    增强鼠标可用性
+        label标签,指向一个域
+        for属性 : 指向一个域id-->
+    <p>
+        <label for="mark">你点我试试</label>
+        <input type="text" id="mark" name="lll">
+
+    </p>
+
+<!--    表单初级验证
+        placeholder : 域内提示信息
+        required : 域内不能为空
+        pattern : 正则表达式-->
+    <p>提示 :
+        <input type="text" name="提示信息" placeholder="请输入提示信息" required>
+    </p>
+    <p>
+        <input type="submit">
+        <input type="reset">
+    </p>
+</form>
+</body>
+</html>

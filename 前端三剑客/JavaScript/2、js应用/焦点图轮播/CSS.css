@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    color: #fff;
+}
+#body{
+    position: relative;
+}
+
+.body-img{
+    width: 400px;
+    height: 300px;
+    display: none;
+}
+
+.img-current{
+    display: block;
+}
+
+#body-ul{
+    width: 60px;
+    height: 12px;
+    position: absolute;
+    left: 173px;
+    top: 269px;
+}
+
+.ul-li{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #f2eded;
+    float: left;
+    margin-left: 5px;
+
+}
+
+.li-current{
+    background-color: #110e0e;
+}
+

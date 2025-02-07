@@ -1,0 +1,6 @@
+﻿  Router.cpp
+C:\Users\di\Desktop\学习文件\数据结构与算法\C++数据结构实现案例：OSPF路由选择模拟系统\OSPF路由模拟系统\Router.cpp(568,7): warning C4101: “power”: 未引用的局部变量
+C:\Users\di\Desktop\学习文件\数据结构与算法\C++数据结构实现案例：OSPF路由选择模拟系统\OSPF路由模拟系统\User.h(123): warning C4715: “User::_find_user”: 不是所有的控件路径都返回值
+C:\Users\di\Desktop\学习文件\数据结构与算法\C++数据结构实现案例：OSPF路由选择模拟系统\OSPF路由模拟系统\OSPF.h(269): warning C4715: “OSPF::DeleteNearPower”: 不是所有的控件路径都返回值
+C:\Users\di\Desktop\学习文件\数据结构与算法\C++数据结构实现案例：OSPF路由选择模拟系统\OSPF路由模拟系统\RoutList.h(255): warning C4715: “RoutList::FindRouters”: 不是所有的控件路径都返回值
+  OSPF路由模拟系统.vcxproj -> C:\Users\di\Desktop\学习文件\数据结构与算法\C++数据结构实现案例：OSPF路由选择模拟系统\OSPF路由模拟系统\x64\Debug\OSPF路由模拟系统.exe

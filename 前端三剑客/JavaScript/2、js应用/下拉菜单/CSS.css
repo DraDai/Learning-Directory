@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border: none;
+    color: #fff;
+}
+
+a:hover{color:#FF3}
+
+a:link,a:visited{text-decoration: none;}
+
+#bg{
+    width: 600px;
+    height: 30px;
+    position: relative;
+}
+
+a{
+
+    width: 150px;
+    height: 36px;
+    display: inline-block;
+    text-align: center;
+    line-height: 36px;
+    background: #06F;
+}
+
+#dis{
+    position: absolute;
+    top: 36px;
+    left: 151px;
+}
+li{float: left;}
+#dis li{
+    clear: left;
+    margin-top: 1px;
+    
+}

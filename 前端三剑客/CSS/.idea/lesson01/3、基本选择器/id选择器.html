@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>id选择器</title>
+
+    <style>
+/*        id选择器格式: #id{}
+            id必须保证全局唯一
+            选择器优先级: id选择器 > class选择器 > 标签选择器*/
+        #id{
+            color:red;
+        }
+
+        .first{
+            color:black;
+        }
+
+        h1{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+
+<h1 id="id" class="first">标题1</h1>
+<h1 class="first">标题2</h1>
+<h1>标题3</h1>
+</body>
+</html>

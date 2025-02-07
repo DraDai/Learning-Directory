@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接伪类</title>
+
+    <style>
+
+/*        默认颜色,无下划线*/
+        a{
+            text-decoration: none;
+            color:#000000
+        }
+
+/*        ':link' 表示未访问的链接
+            ': visited' : 表示已访问的链接
+            ': hover' : 表示鼠标悬停在链接上时的状态
+            ': active' ：表示链接被激活（被点击）的状态
+            ': focus' : 表示链接获得焦点时的状态*/
+        a:link{
+            color:blue;
+        }
+
+        a:visited{
+            color:purple;
+        }
+
+        a:hover{
+            text-decoration:underline;
+        }
+
+        a:active{
+            color:red;
+        }
+
+        a:focus{
+            outline: 2px solid orange;
+        }
+
+    </style>
+</head>
+<body>
+
+<a class="a1" href="#">
+    <img src="images/img.png" alt="共产党宣言" height="371" width="221">
+</a>
+
+<p>
+    <a class="a2" href="https://www.bilibili.com/" target="_blank">共产党宣言</a>
+</p>
+
+<p>
+    <a class="a3" href="https://www.google.com/">作者:马克思,恩格斯</a>
+</p>
+</body>
+</html>

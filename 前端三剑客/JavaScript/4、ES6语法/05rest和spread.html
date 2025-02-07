@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //rest  解决剩余的参数接收问题
+        let fun1 = (a, b, c, d,... arr)=>{
+            console.log(a, b, c, d)
+            console.log(arr)
+        }
+
+        fun1(1,2,3,4,5,6,7,8,9)
+
+
+        //spread 展开在rest实参上的使用
+        let arr = [1,2,3]
+        let fun2 = (a,b,c)=>{
+            console.log(a,b,c)
+        }
+        fun2(...arr)
+
+
+        //快速合并数组
+        let a = [1,2,3]
+        let b = [4,5,6]
+        let c = [7,8,9]
+        let d = [...a,...b,...c]
+        console.log(d)
+
+
+        //快速合并对象
+        let person1={name:"张三"}
+        let person2={age:"10"}
+        let person3={gender:"boy"}
+        let person4={...person1,...person2,...person3}
+        console.log(person4)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

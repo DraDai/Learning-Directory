@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框样式</title>
+
+<!--    border 属性是一个复合属性，它可以同时设置边框的宽度、样式和颜色。
+        以下是一些可以用于 border 的其他属性：
+            border-width: 设置边框的宽度。
+            border-style: 设置边框的样式（如实线、虚线等）。
+            border-color: 设置边框的颜色。
+            border-radius: 设置边框的圆角半径。
+            border-top, border-right, border-bottom, border-left: 分别设置元素的顶部、右侧、底部和左侧的边框样式。
+            border-top-width, border-right-width, border-bottom-width, border-left-width: 分别设置元素的顶部、右侧、底部和左侧的边框宽度。
+            border-top-style, border-right-style, border-bottom-style, border-left-style: 分别设置元素的顶部、右侧、底部和左侧的边框样式。
+            border-top-color, border-right-color, border-bottom-color, border-left-color: 分别设置元素的顶部、右侧、底部和左侧的边框颜色。
+            这些属性可以单独使用，也可以与 border 属性一起使用，以更精细地控制边框的外观。通过组合使用这些属性，你可以创建各种复杂的边框样式来满足设计需求。
+-->
+    <style>
+        #div1{
+            width:200px;
+            height:200px;
+            margin:0 auto;
+            margin-bottom:10px;
+
+            border-style:double;
+            border-width:3px;
+            border-color:#41dca6;
+            border-radius:10px;
+        }
+
+        #div2{
+            width:200px;
+            height:200px;
+            margin:0 auto;
+            margin-bottom:20px;
+
+            border-style:groove;
+            border-width:5px;
+            border-color:#2f75a8;
+            border-top-color:#eadfdf;
+            border-top-left-radius:20px;
+            border-top-right-radius:20px;
+        }
+
+        #div3{
+            width:300px;
+            height:300px;
+            margin:0 auto;
+
+            border-style:outset;
+            border-top-style:inset;
+            border-width:10px;
+            border-color:#188a18;
+            border-left-color:red;
+            border-top-right-radius:20px;
+            border-bottom-right-radius:20px;
+
+/*            要为元素添加边框阴影，你可以使用 CSS 的 box-shadow 属性。
+              box-shadow 属性可以为元素创建一个或多个阴影效果。该属性的语法如下：
+
+                box-shadow: h-shadow v-shadow blur spread color inset;
+
+              h-shadow：水平阴影的位置。可以是正值（向右偏移）或负值（向左偏移）。
+              v-shadow：垂直阴影的位置。可以是正值（向下偏移）或负值（向上偏移）。
+              blur：可选。模糊距离。
+              spread：可选。阴影的大小。正值扩展阴影，负值收缩阴影。
+              color：阴影的颜色。
+              inset：可选。将阴影设为内阴影（在边框内部）。*/
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+/*            在这个示例中，.box 类的 <div> 元素具有一个向右下方偏移的阴影，模糊距离为10px，扩展阴影的大小为0px，颜色为半透明的黑色。*/
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+</body>
+</html>

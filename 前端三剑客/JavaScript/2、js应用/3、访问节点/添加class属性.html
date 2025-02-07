@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加class属性</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: #FC0;
+        }
+    </style>
+</head>
+<body>
+<!--getElementById() 获得拥有指定id的节点
+    getElementByName() 获得带有指定name属性名称的节点
+    getElementsByTagName() 获得带有指定标签名的节点
+    getElementByClassName() 获取指定class的节点-->
+<div id = "text"></div>
+<script>
+    document.getElementById('text').className = 'box';
+</script>
+</body>
+</html>

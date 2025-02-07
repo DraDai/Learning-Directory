@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本样式</title>
+
+    <style>
+
+/*      颜色:
+            rgb(x, y, z) xyz最大值分别代表红绿蓝三基色
+            rgba(x, y, z, a), 其中a是透明度*/
+        h1 {
+            color: rgba(0,255,255,0.5);
+
+/*        text-align : 进行对齐,能靠左靠右和剧中
+            'left' : 左文本对齐
+            'right' : 右文本对齐
+            'center' : 居中对齐
+            'justify' : 文本两端对齐*/
+            text-align: center;
+        }
+
+/*      text-indent : 指定文本段落第一行的缩进量
+            '<length>' : 指定一个固定的长度值，例如像素（px）、英寸（in）等。
+            '<percentage>'：相对于包含块的宽度的百分比值。
+            'inherit'：从父元素继承该属性的值*/
+        p{
+            text-indent: 2em;
+        }
+
+/*      height: 表示元素的高度。它指定了元素在垂直方向上的尺寸大小。
+        line-height : 用于设置行内元素中文本行之间的高度。
+        它决定了文本行与文本行之间的垂直间距，同时也影响了文本行高度*/
+        .p3{
+            background-color: red;
+            height: 200px;
+            line-height: 100px;
+        }
+
+/*        text-decoration : 用于控制文本的装饰效果，例如下划线、删除线等。
+                'none' : 默认值,取消文本装饰效果
+                'underline' : 在文本下方添加下划线
+                'overline' : 在文本上方添加上划线
+                'line-through' : 在文本中间添加删除线*/
+        .l1{
+            text-decoration: underline;
+        }
+        .l2{
+            text-decoration: overline;
+        }
+        .l3{
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+<h1>故事结束</h1>
+
+<p>《魁拔》是中国大陆一部玄幻动画系列剧，由青青树动漫制作。系列立项初期名为《灵山王》[1]。</p>
+<p>原计划制作520集电视动画（52集×10年）和5部电影动画[2]，后电视动画的制作计划被削减至156集[3]。
+</p>
+<p class="p3">原计划制作520集电视动画（52集×10年）和5部电影动画[2]，后电视动画的制作计划被削减至156集[3]。
+
+<p class="l1">12345</p>
+<p class="l2">12345</p>
+<p class="l3">12345</p>
+</body>
+</html>

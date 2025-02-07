@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位元素的堆叠与透明度</title>
+
+
+<!--    当涉及到图层堆叠和透明度时，理解 `z-index` 和透明度是很重要的。让我们详细讨论一下这两个概念。
+
+### 1. `z-index`：
+
+`z-index` 是 CSS 属性，用于控制定位元素在堆叠上下文中的层叠顺序。它可以接受整数值、auto 或 inherit 作为值。
+
+- 整数值：指定了元素在堆叠上下文中的层叠顺序，数值越大，元素就越靠近顶部（显示在其他元素之上）。
+- auto：表示浏览器将计算和使用默认的堆叠顺序。
+- inherit：表示元素继承父元素的 `z-index` 值。
+
+### 2. 透明度（opacity）：
+
+透明度是指元素的不透明程度，可以使用 CSS 的 `opacity` 属性来设置。它接受一个 0 到 1 之间的数值作为参数，其中 0 表示完全透明，1 表示完全不透明。可以使用小数来表示部分透明度。
+
+### 如何一起使用：
+
+当使用 `z-index` 和透明度时，需要注意以下几点：
+
+1. **元素定位**：`z-index` 只对定位元素（`position: relative`, `position: absolute`, `position: fixed`）有效。非定位元素设置 `z-index` 不会产生效果。
+
+2. **堆叠上下文**：`z-index` 只在同一个堆叠上下文中生效。如果两个元素不在同一个堆叠上下文中，则 `z-index` 会失效。可以通过调整定位属性、父元素的 `z-index` 或者创建新的堆叠上下文来解决。
+
+3. **透明度继承**：透明度是可以继承的。如果一个元素设置了透明度，它的子元素会继承相同的透明度，除非子元素显式设置了不同的透明度。
+
+4. **性能考虑**：使用 `z-index` 和透明度可能会影响页面的性能。浏览器需要额外的计算来确定元素的堆叠顺序和透明度效果。因此，在使用时应考虑性能问题，尽量减少不必要的堆叠和透明度操作。
+
+综上所述，`z-index` 和透明度是控制元素层叠和透明度的重要工具，在设计和布局页面时，合理使用它们可以实现更丰富的效果和用户体验。-->
+    <style>
+        .container {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: #dadac6;
+        }
+
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: rgba(255, 0, 0, 0.5);
+            z-index: 1;
+            top: 50px;
+            left: 50px;
+        }
+
+        .box2 {
+            background-color: rgba(0, 0, 255, 0.5);
+            z-index: 2;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</div>
+</body>
+</html>

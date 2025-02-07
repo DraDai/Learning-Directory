@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1、let 不能重复声明
+        // let i = 10
+        let i = 9
+
+        // 2、let有块级作用域，非函数的花括号遇见let会有块级作用域，也就是只能在花括号里面访问。
+        // {
+        //     var j = 10
+        //     let k = 10
+        // }
+        // console.log(j)
+        // console.log(k)
+        // 3、let不会预解析进行变量提升
+        console.log(a)
+        var a = 10
+
+        // console.log(l)
+        // let l = 9
+        // 4、let 定义的全局变量不会作为window的属性
+        var p = 10
+        console.log(window.p)
+        // 5、let在es6中推荐优先使用
+
+        //6 const 就是不可修改的let
+        let q = 10
+        q = 11
+        
+        // const b = 8
+        // b = 9
+
+        //7\并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。
+        const techers = ["张老师"]
+        // techers = ["", ""]
+        techers.push("陈老师")
+
+        //8、模板字符串     字符串换行和字符串拼接问题
+            //"" '' 处理字符串不支持多行
+            let city = '北京'
+            let info = "<ul>"+
+                            "<li>"+city+"</li>"+
+                            "<li></li>"+
+                        "</ul>"
+            //反引号 ``支持多行
+            let str = `<ul>
+                            <li></li>
+                            <li></li>
+                            <li>${city}</li>
+                            <li></li>
+                            <li></li>
+                        </ul>`
+            console.log(str)
+    </script>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
